@@ -8,7 +8,7 @@ public class User {
     private String username;
     private String email;
     @Id
-    private String userID;
+    private long userID;
     private String password;
 
     public String getPassword() {
