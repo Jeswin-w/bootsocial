@@ -5,11 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class BootsocialApplication {
+public class BootSocialApplication {
 
 	public static void main(String[] args) {
-
-		ApplicationContext applicationContext = SpringApplication.run(BootsocialApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(BootSocialApplication.class, args);
 	}
 
 }

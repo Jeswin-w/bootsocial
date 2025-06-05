@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
-public class SignupController {
+public class AuthController {
 
     private UserService userService;
-    SignupController (UserService userService) {
+    AuthController (UserService userService) {
         this.userService = userService;
     }
     @PostMapping("/signup")
