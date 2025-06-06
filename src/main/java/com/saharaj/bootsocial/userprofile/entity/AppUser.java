@@ -4,7 +4,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="users")
-public class User {
+public class AppUser {
+    public String getUsername() {
+        return username;
+    }
+
     private String username;
     private String email;
     @Id
