@@ -1,5 +1,6 @@
 package com.saharaj.bootsocial.userprofile.entity;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,7 +13,7 @@ public class AppUser {
     private String username;
     private String email;
     @Id
-    private long userID;
+    private ObjectId userID;
     private String password;
 
     public String getPassword() {

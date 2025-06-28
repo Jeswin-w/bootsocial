@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2>Sign Up</h2>
-<form id="signupForm" method="POST" action="http://localhost:8080/signup">
+<form id="signupForm">
     <label for="username">Username:</label><br />
     <input type="text" id="username" name="username" required /><br /><br />
 
@@ -21,7 +21,6 @@
 </form>
 
 <script>
-    // Optional: To send JSON instead of form data with fetch API
     document.getElementById('signupForm').addEventListener('submit', async function (e) {
       e.preventDefault();
 
@@ -38,11 +37,13 @@
           body: JSON.stringify(data)
         });
 
-        if (response.ok) {
+        const text = await response.text();
+
+        if (response.ok && text === 'success') {
           alert('User registered successfully!');
           this.reset();
         } else {
-          alert('Signup failed.');
+          alert('Signup failed: ' + text);
         }
       } catch (error) {
         alert('Error: ' + error.message);
